@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktweak_docs=self.webpackChunktweak_docs||[]).push([[407],{7115:a=>{a.exports=JSON.parse('{"label":"hola","permalink":"/tweak-docs/blog/tags/hola","allTagsPath":"/tweak-docs/blog/tags","count":1}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktweak_docs=self.webpackChunktweak_docs||[]).push([[490],{9998:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/tweak/blog/tags/facebook","allTagsPath":"/tweak/blog/tags","count":1}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktweak_docs=self.webpackChunktweak_docs||[]).push([[842],{3820:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/tweak-docs/blog/tags/docusaurus","allTagsPath":"/tweak-docs/blog/tags","count":4}')}}]);
