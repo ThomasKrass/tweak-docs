@@ -10,18 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+        shell: bash
 
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+
+      - name: Install Dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy 🚀
         run: GIT_USER=ThomasKrass USE_SSH=true npm run deploy
