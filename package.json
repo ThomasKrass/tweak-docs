@@ -1,7 +1,13 @@
 {
   "name": "tweak-docs",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": "Thomas Kraß",
+  "homepage": "https://github.com/ThomasKrass/tweak#readme",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
