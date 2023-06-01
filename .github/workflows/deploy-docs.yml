@@ -40,5 +40,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "DeployBot"
+          git config --global user.email "deploybot@example.com"
+
       - name: Deploy 🚀
         run: GIT_USER=ThomasKrass USE_SSH=true npm run deploy
